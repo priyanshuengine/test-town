@@ -11,34 +11,15 @@
   }
   
   @media screen and (max-width: 768px) {
-	.users {
-	  display: flex;
-	  flex-direction: column;
-	  padding-left: 5%;
-	  padding-right: 5%;
-	  padding-top: 5%;
-	}
-  
-	html, body {
-		margin: 0;
-		padding: 0;
-		height: 100%;
-	}
-	body {
-		display: flex;
-		flex-direction: column;
-	}
 	
-  
-	.column1,
-	.column2,
-	.column3 {
-	  display: flex;
-	  flex-direction: column;
-	  gap: 1rem;
-	  align-items: center;
-	  min-width: 100%;
+	body {
+	  height: 100%;
+	  width: 100%;
+	  overflow-x : hidden;
 	}
+  
+  
+	
 	p{
 	  margin-top: 4%;
 	  margin-bottom: 6%;
@@ -56,19 +37,7 @@
 	 
 	}
   
-	.main .gridlines {
-	  width: 40vh;
-	  height: 55vh;
-	  margin-left: 1rem;
-	  margin-top: 5.5%;
-	  border-radius: 50%;
-	  position: absolute;
-	  z-index: -1;
-	  background-size: 40px 40px;
-	  background-image:
-		linear-gradient(rgba(100, 148, 237, 0.23) 1px, transparent 1px),
-		linear-gradient(90deg, rgba(100, 148, 237, 0.23) 1px, transparent 1px);
-	}
+	
   
 	.sub-text {
 	  padding-right: 5%;
@@ -178,7 +147,7 @@
 	}
   
 	.spotlight {
-	  width: 250%;
+	  width: 150%;
 	  overflow: hidden;
 	}
   
@@ -225,9 +194,9 @@
 	.card-if {
 	  width: 90px;
 	  height: 50px;
-	  background: black;
+	  
 	  margin-bottom: 5%;
-	  border: 2px black solid;
+	 
 	  border-radius: 0rem;
 	  overflow: hidden;
 	  color: black;
@@ -326,20 +295,19 @@
 	box-sizing: border-box;
   }
   
-  html,body {
+  body {
 	font-family: montserrat;
 	background-color: #000000;
 	color: #ffff;
-	overflow-x: hidden;
   
   }
   
   .main {
 	width: 100%;
-	height: 10%;
+	height: 100%;
 	background: linear-gradient(to bottom, rgba(0, 174, 255, 0.219), rgba(3, 108, 156, 0)) transparent;
-	flex: 1 0 auto; 
-  }
+    text-align: center;  
+}
   
   
   
@@ -459,39 +427,19 @@
   }
   
   .cta {
-    background: white;
-    font-size: 1.5rem;
-    box-shadow: 5px 5px 0px 0px #28CBFF !important;
-    cursor: pointer;
-    color: #000;
-    border: 2px solid #000000;
-    border-radius: 1px;
-    padding: 0.9rem;
-    margin: 20px auto; /* Center horizontally by default */
-    display: block; /* Ensure block-level centering */
-    max-width: 80%; /* Constrain width for smaller screens */
-    text-align: center; /* Center the text within the button */
-}
-
-/* Media queries for responsiveness */
-
-/* Medium screens (tablets) */
-@media (min-width: 768px) {
-    .cta {
-        font-size: 1.4rem; /* Slightly smaller font size */
-        max-width: 60%; /* Adjust max-width for medium screens */
-    }
-}
-
-/* Large screens (desktops) */
-@media (min-width: 1200px) {
-    .cta {
-        font-size: 1.5rem; /* Original font size */
-        margin-left: 720px; /* Restore original margin for large screens */
-        max-width: none; /* Remove max-width constraint */
-    }
-}
-
+	background: white;
+	font-size: 1.5rem;
+	box-shadow: 5px 5px 0px 0px #28CBFF!important;
+	cursor: pointer;
+	border: 2px solid #000000;
+	border-radius: 1px;
+	padding: 0.9rem;
+  }
+  
+  .cta:hover {
+	font-size: 1.7rem;
+	transition: 0.1s ease-in-out;
+  }
   .cta2 {
 	background: #000000;
 	font-size: 1.5rem;
@@ -503,10 +451,6 @@
 	padding: 0.9rem;
   }
   
-  .cta:hover {
-	font-size: 1.7rem;
-	transition: 0.1s ease-in-out;
-  }
   
   section {
 	background: url(bg1.jpg) no-repeat;
@@ -584,13 +528,21 @@
 	padding-bottom: 5%;
   }
   
-  
+  .bgchange {
+	width: 100%;
+	height: 500%;
+	background: linear-gradient(45deg,
+		rgb(199, 255, 255),
+		rgb(185, 247, 247));
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding-bottom: 5%;
+  }
   
   .bgchange::before {
 	content: "";
 	position: absolute;
 	width: 100%;
-	height: 150vh;
+	height: 50vh;
 	background-image: linear-gradient(90deg,
 		rgba(0, 0, 0, 0.1) 1px,
 		transparent 1px),
@@ -598,7 +550,6 @@
 	background-size: 50px 50px;
 	padding-bottom: 5%;
   }
-  
   .spotlight {
 	padding-top: 5%;
   }
@@ -606,18 +557,7 @@
 	  color: gold; /* Change the color to whatever you like */
   }
   
-  .card {
-	position: relative;
-	width: 250px;
-	height: 300px;
-	background: #28CBFF;
-	padding: 2.9rem;
-	border-radius: 1rem;
-	border: 0.5vmin solid #05060f;
-	box-shadow: 0.4rem 0.4rem white, 0.7rem 0.7rem #000000;
-	overflow: hidden;
-	color: black;
-  }
+  
   
   .next {
 	display: flex;
@@ -688,9 +628,6 @@
 	color: #fff;
   }
   
-  .highlight {
-	color: rgb(8, 218, 255);
-  }
   
   @keyframes scrolling {
 	0% {
@@ -1097,35 +1034,8 @@
   
  
   
-  
-  .card-if {
-	position: relative;
-	width: 110px;
-	height: 100px;
-	background: #28CBFF;
-	/* padding: 1rem; */
-	border-radius: 1rem;
-	border: 0.5vmin solid #05060f;
-	box-shadow: 0.4rem 0.4rem white,0.6rem 0.6rem #000000;
-	overflow: hidden;
-	color: black;
-	
-  }
-  @media (max-width: 767px) {
-    .card-if {
-        animation: scrollRightToLeft 5s linear infinite; /* Adjust duration as needed */
-        white-space: nowrap; /* Ensure the content doesn't wrap */
-    }
-}
+ 
 
-    @keyframes scrollRightToLeft {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
 .cardan-if {
 	position: relative;
 	width: 110px;
@@ -1381,18 +1291,14 @@
   }
   
   @media screen and (max-width: 768px) {
-	.users {
-	  display: flex;
-	  flex-direction: column;
-	  padding-left: 5%;
-	  padding-right: 5%;
-	  padding-top: 5%;
-	}
+	 .users {
+    flex-direction: row;
+    padding-left: 8%;
+    padding-right: 38%;
+    padding-top: 7%;
+  }
   
-	body {
-	  height: 100%;
-	  width: 100%;
-	}
+	
   
   
 	
@@ -1582,9 +1488,8 @@
 	.card-if {
 	  width: 90px;
 	  height: 50px;
-	  background: black;
-	  margin-bottom: 5%;
-	  border: 2px black solid;
+	   margin-bottom: 5%;
+	  
 	  border-radius: 0rem;
 	  overflow: hidden;
 	  color: black;
@@ -1683,7 +1588,7 @@
 	box-sizing: border-box;
   }
   
- 
+  
   
   
   
@@ -1692,8 +1597,8 @@
     border-radius: 50%;
     width: 400px;
     height: 350px;
-    margin-left: 5rem;
-    margin-top: 1rem;
+    margin-left: 55rem;
+    margin-top: 4rem;
     color: wheat;
     position: absolute;
     z-index: -1;
@@ -1832,40 +1737,12 @@
   }
   
   h1 {
-    padding-top: 10%;
-    padding-left: 25%;
-    font-size: 4rem;
-    font-family: 'trap', sans-serif; /* Include a fallback font */
-}
-
-/* Media queries for different screen sizes */
-
-/* Medium screens (tablets) */
-@media (max-width: 1200px) {
-    h1 {
-        padding-top: 8%;
-        padding-left: 25%;
-        font-size: 3.5rem;
-    }
-}
-
-/* Small screens (landscape phones) */
-@media (max-width: 768px) {
-    h1 {
-        padding-top: 6%;
-        padding-left: 20%;
-        font-size: 3rem;
-    }
-}
-
-/* Extra small screens (portrait phones) */
-@media (max-width: 480px) {
-    h1 {
-        padding-top: 4%;
-        padding-left: 15%;
-        font-size: 2.5rem;
-    }
-}
+	padding-top: 5%;
+	padding-left: 5%;
+	padding: auto;
+	font-size: 4rem;
+	font-family: 'trap';
+  }
   
   .sub-text {
 	padding-left: 5%;
@@ -1931,7 +1808,7 @@
   
   .bgchange {
 	width: 100%;
-	height: 500%;
+	height: 100%;
 	background: linear-gradient(45deg,
 		rgb(199, 255, 255),
 		rgb(185, 247, 247));
@@ -1943,7 +1820,7 @@
 	content: "";
 	position: absolute;
 	width: 100%;
-	height: 50vh;
+	height: 100vh;
 	background-image: linear-gradient(90deg,
 		rgba(0, 0, 0, 0.1) 1px,
 		transparent 1px),
@@ -1955,22 +1832,114 @@
   .spotlight {
 	padding-top: 5%;
   }
-  
-  .card {
+  .next {
 	display: flex;
 	justify-content: space-around;
-	background-color: #c7ffff;
 	align-items: center;
-	padding: 70px 0;
-	border: none;
-	box-shadow: none;
-	color: black;
-	font-family: Arial, sans-serif;
-	width: 100%;
-	position: relative;
+	padding: 2rem;
+	background-color: #D4F4FF; /* Matching the background color from the image */
+  }
+  
+ 
+
+.counter-section {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: -10px;
+	align-items: center;
+	justify-items: center;
+}
+
+.counter-card {
+    background-color: #28CBFF !important; /* Light blue background */
+    border-radius: 1px; /* Rounded corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    height: 200px; /* Set a specific height */
+    padding: 0 20px; /* Padding only on sides */
+    max-width: 1900px; /* Optional: constrain width */
+    margin: 0 auto; /* Optional: center the card horizontally */
+    display: flex; /* Flexbox to center content */
+    align-items: center; /* Vertically center content */
 	z-index: 1;
 }
-  
+
+.counter-box {
+	display: grid;
+	grid-template-columns: auto 21fr;
+	align-items: center;
+	justify-items: center;
+	width: 100%;
+	margin-left: 200px;
+}
+
+.counter-box h1 {
+	font-size: 80px;
+	font-weight: 700;
+	color: #000;
+	margin: 0;
+	text-align: right;
+	padding-right: 20px;
+}
+
+.counter-content {
+	text-align: left;
+}
+
+.counter-content p {
+	font-size: 24px;
+	font-weight: 600;
+	color: #000;
+	margin: 0;
+}
+
+.counter-content span {
+	font-size: 16px;
+	color: #000;
+	display: block;
+}
+.custom-box img {
+    max-width: 200%; /* Ensures the image does not exceed the container's width */
+    max-height: 100%; /* Ensures the image does not exceed the container's height */
+    object-fit: cover; /* Ensures the image covers the container, cropping if necessary */
+    border-radius: 15px; /* Rounds the corners of the image */
+    opacity: 0.7; /* Sets the transparency level of the image */
+    transition: opacity 0.3s; /* Adds a smooth transition effect for opacity changes */
+}
+@media (max-width: 768px) {
+    .counter-section {
+        grid-template-columns: 1fr; /* Stack all cards vertically */
+    }
+
+    .counter-card {
+        height: auto; /* Let the card height adjust automatically */
+        padding: 20px; /* Add padding around the card */
+        max-width: 90%; /* Constrain the width to fit within mobile view */
+        margin: 10px auto; /* Add some margin for spacing between cards */
+        flex-direction: column; /* Stack the content vertically */
+        align-items: flex-start; /* Align content to the start */
+    }
+
+    .counter-box {
+        grid-template-columns: 1fr; /* Stack the number and text vertically */
+        margin-left: 0; /* Remove the left margin */
+        width: 100%; /* Ensure the box takes the full width */
+    }
+
+    .counter-box h1 {
+        font-size: 60px; /* Adjust the number size for mobile */
+        text-align: left; /* Align the number to the left */
+        padding-right: 0; /* Remove right padding */
+        margin-bottom: 10px; /* Add margin below the number */
+    }
+
+    .counter-content p {
+        font-size: 20px; /* Adjust text size for mobile */
+    }
+
+    .counter-content span {
+        font-size: 14px; /* Adjust smaller text size for mobile */
+    }
+}
   .next {
 	display: flex;
 	align-items: center;
@@ -2364,14 +2333,17 @@
   }
   
   footer {
+	margin-top: 0;
 	text-align: center;
+	bottom: 0;
 	width: 100%;
 	
-	left: 0;
-	bottom: 0;
+   
+    
 	background-color: #000000;
 	color: white;
-}
+  
+  }
   
   .hme {
 	padding-top: 0%;
@@ -2429,11 +2401,11 @@
 	position: relative;
 	width: 110px;
 	height: 100px;
-	background: #28CBFF;
+	
 	/* padding: 1rem; */
 	border-radius: 1rem;
-	border: 0.5vmin solid #05060f;
-	box-shadow: 0.4rem 0.4rem white,0.6rem 0.6rem #000000;
+	
+	
 	overflow: hidden;
 	color: black;
   }
@@ -2863,36 +2835,85 @@
   
   .users {
 	display: flex;
-	padding-left: -80%;
-	
-	padding-top: 2%;
-	gap: 1px;
+	padding-left: 8%;
+	padding-right: 8%;
+	padding-top: 7%;
   }
   
+  .column1,
+  .column2,
+  .column3 {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	align-items: center;
+	min-width:33%;
+  }
+  @media (max-width: 767px) {
+	.column1, .column2 {
+	  width: 48%; /* Two columns side by side */
+	}
+	
+	.column3 {
+	  width: 100%; /* Full width in the second row */
+	}
+  }
   
-  
-  
-  
-.usecard {
-    background-color: #fff;
-    border-radius: 32px;
-    box-shadow: 8px 8px 0 #28CBFF, 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 1.9rem;
-    padding: 20px;
-    border: 1px solid #000000;
-    min-width: 500px; /* Ensure cards have a minimum width */
-    animation: slideIn 10s linear infinite; /* Animation for continuous loop */
+  .comments {
+    overflow: hidden; /* Hides the overflowing cards */
+    width: 100%; /* Make sure the container is full-width */
 }
 
-@keyframes slideIn {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+   .slider {
+    display: flex;
+    animation: slide 40s linear infinite; /* Animate the slider */
 }
   
+  
+  
+  .usecard {
+	background-color: #fff;
+	border-radius: 18px;
+	box-shadow: 8px 8px 0 #28CBFF, 0 2px 4px rgba(0, 0, 0, 0.1);
+	margin: 0.5rem;
+	padding: 40px;
+	min-width: 50%;
+	border-width: 5px;
+	border: 1px solid #000000;
+  }
+  @keyframes slide {
+    0% {
+        transform: translateX(100%); /* Start off-screen from the right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move off-screen to the left */
+    }
+}
+@media (max-width: 768px) {
+    .users {
+        gap: 10px;  /* Reduce gap between cards */
+        justify-content: center;  /* Center the cards */
+    }
+
+    .usecard {
+        min-width: 180px;  /* Reduce card size for mobile */
+        max-width: 680px;
+        padding: 10px;  /* Reduce padding */
+    }
+
+    .user-photo {
+        width: 30px;  /* Smaller photo size */
+        height: 30px;
+    }
+
+    .comment-text {
+        font-size: 0.9rem;  /* Smaller text */
+    }
+
+    .heading {
+        font-size: 1.5rem;  /* Adjust heading size for mobile */
+    }
+}
   
   .user-info {
 	display: flex;
@@ -3144,7 +3165,6 @@
     flex-direction: column;
     justify-content: center;
     margin: 0 auto; /* Center horizontally */
-	font-family: 'Bebas Neue', sans-serif!important;
 }
 
 .contact-info h4 {
@@ -3158,25 +3178,18 @@
     width: 23px;
 }
 
-.social-icons {
-    margin-top: 20px;
+
+.styled-text {
+	font-family: 'Trap', sans-serif; /* Make sure 'Trap' font is loaded */
+	font-weight: bold;
+	font-size: 40px;
+	color: #FFFFFF;
+	text-align: center;
+	margin: 0;
 }
 
-.social-icons a {
-    color: #fff;
-    font-size: 24px;
-    margin: 0 10px;
-    text-decoration: none;
-   
-    padding: 10px;
-    border-radius: 5px;
-    display: inline-block;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.social-icons a:hover {
-    background-color: #fff;
-    color: #000;
+.styled-text .accent {
+	color: #888888; /* Adjust the accent color */
 }
 
 .team-section {
@@ -3185,12 +3198,12 @@
 .team-section h1 {
 	color: #00aaff;
 	margin-bottom: 30px;
-	margin-left: 25rem;
+	margin-left: 50rem;
 }
 .team-container {
 	display: flex;
 	justify-content: center;
-	gap: 220px;
+	gap: 180px;
 	flex-wrap: nowrap;
 }
 .team-member {
@@ -3237,261 +3250,223 @@
 		width: 100%;
 	}
 }
-
-.responsive-svg-container {
-	max-width: 100%;
-	display: flex;
-	justify-content: center;
-  }
-  .responsive-svg {
-	width: 100%;
-	height: auto;
-  }
-
-  .logo-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr); /* 6 columns to create 2 rows with 12 logos */
-    gap: -20px;
-    padding: 50px;
-	margin-right: -190px;
-    
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.logo-grid img {
-    width: 50%;
-    height: auto;
-    object-fit: contain;
-}
-
-.sub-container {
-    padding: 220px;
-}
-
-.sub-header {
-    text-align: center;
-    color: #00bfff;
-}
-
-.description {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-button {
-    background-color: #00bfff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: 0.4fr 0.2fr 0.2fr;
-    grid-template-rows: repeat(2, auto);
-    gap: 10px;
-}
-
-.box {
-    background-color: #1e2a38;
-    padding: 10px;
-    border-radius: 8px;
-}
-
-/* Specific styles for each box */
-
-.branding {
-    grid-column: span 1;
-    grid-row: 1 / span 2;
-}
-
-.performance {
-    grid-column: span 3;
-    position: relative;
-}
-
-.performance .graph {
-    width: 100%;
-    height: 150px;
-    background-color: #00bfff;
-    animation: grow-width 2s ease-in-out;
-}
-
-.ugc {
-    grid-column: span 1;
-    grid-row: 2;
-    background-color: #283b4d;
-}
-
-.meta {
-    grid-column: span 2;
-    grid-row: 2;
-    background-color: #344c60;
-}
-
-.seo {
-    grid-column: span 1;
-    position: relative;
-}
-
-.seo .bar-chart {
+.custom-grid {
     display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
-    height: 150px;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 1700px;
+    margin: 0 auto;
+	
 }
 
-.seo .bar {
-    width: 20%;
-    background-color: #00bfff;
-    animation: grow-height 2s ease-in-out;
+.custom-box {
+    background-color: #C9F2FF;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.custom-box1 {
+    background-color: #C9F2FF;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.seo .bar1 { height: 30%; }
-.seo .bar2 { height: 50%; }
-.seo .bar3 { height: 70%; }
-.seo .bar4 { height: 90%; }
-.seo .bar5 { height: 60%; }
+.custom-box img {
+    max-width: 500px;
+    max-height: 500px!important;
+    object-fit: fill;
+    border-radius: 15px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+	border: none;
+}
+.custom-box1 img{
+	max-width: 350px;
+    max-height: 500px!important;
+    object-fit: fill;
+    border-radius: 15px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+	border: none;
 
-.software {
-    grid-column: span 1;
-    background-color: #40556e;
+}
+.custom-box1 h2 {
+    position: absolute;
+    top: 10px; /* Adjust the value to control the vertical position */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    color: #000;
+    font-size: 24px;
+    text-align: center;
+    z-index: 2;
+	font-weight: bolder;
+}
+.custom-box h2 {
+    position: absolute;
+    top: 10px; /* Adjust the value to control the vertical position */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    color: #000;
+    font-size: 24px;
+    text-align: center;
+    z-index: 2;
 }
 
-@keyframes grow-width {
-    from {
-        width: 0;
+.custom-box:hover img {
+    opacity: 5.4;
+}
+
+/* Set specific flex-basis for different boxes */
+.box1 {
+    flex-basis: 24%;
+}
+
+.box2 {
+    flex-basis: 48%;
+}
+
+.box3 {
+    flex-basis: 24%;
+}
+
+.box4 {
+    flex-basis: 48%;
+}
+
+.box5 {
+    flex-basis: 24%;
+}
+
+.box6 {
+    flex-basis: 24%;
+}
+
+@media (max-width: 768px) {
+    .custom-grid {
+        flex-direction: row;
     }
-    to {
-        width: 100%;
+
+    .custom-box {
+        flex-basis: 100%;
     }
+	.custom-box1 {
+		flex-basis: 100%;
+	}
 }
 
-@keyframes grow-height {
-    from {
-        height: 0;
-    }
-    to {
-        height: 100%;
-    }
-}
 .business-container {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
 }
+
 .business-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items to the top */
 }
+
 .header-title {
-	font-size: 48px;
-	color: #00aaff;
-	margin-left: -260px;
+    font-size: 60px; /* Adjusted for closer match */
+    color: #00aaff;
+    margin-top: 80px;
+    margin-left: -310px;
+    font-weight: bold; /* Make the title bold */
+    text-align: left!important;
 }
-.header-text {
-	max-width: 50%;
-}
+
 .sub-header {
-	font-size: 18px;
-	color: #888;
-	margin-top: 90px;
-	text-align: left;
+    font-size: 18px;
+    color: #cccccc; /* Lighter gray for closer match */
+    margin-top: 150px;
+    text-align: left;
 }
+
 .cta-button {
-	display: inline-block;
-	margin-top: 20px;
-	padding: 10px 20px;
-	color: #00aaff;
-	background-color: #000000;
-	border: 2px solid #00aaff;
-	text-decoration: none;
-	border-radius: 1px;
-	font-weight: bold;
-	z-index: 1;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 25px;
+    color: #00aaff;
+    background-color: #000;
+    border: 2px solid #00aaff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover transition */
 }
+
+.cta-button:hover {
+    background-color: #00aaff;
+    color: #000;
+}
+
 .cta-button .cta-icon {
-	width: 20px;
-	height: auto;
-	margin-right: 10px;
+    width: 20px;
+    height: auto;
+    margin-left: 10px;
 }
 
 /* Mobile responsive styles */
 @media (max-width: 768px) {
-	.business-header {
-		flex-direction: column;
-		align-items: flex-start;
-		text-align: center;
-	}
-	.header-title {
-		font-size: 22px;
-		margin-left: 0;
-		margin-bottom: 20px;
-	}
-	.header-text {
-		max-width: 100%;
-	}
-	.sub-header {
-		font-size: 14px;
-		margin-top: 20px;
-	}
-	.cta-button {
-		padding: 10px 15px;
-	}
+    .business-header {
+        flex-direction: column;
+        align-items: center; /* Center-align for mobile */
+        text-align: center;
+    }
+    .header-title {
+        font-size: 36px; /* Slightly larger for mobile */
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    .sub-header {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    .cta-button {
+        padding: 10px 15px;
+        font-size: 16px; /* Adjust font size for better readability */
+    }
 }
 
-.business-grid {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(2, 250px);
-	gap: 10px;
-	grid-template-areas: "branding marketing marketing ads" "funnel funnel seo software";
+
+/* Default styles (Desktop) */
+.desktop-view {
+    display: block;
 }
-.grid-box {
-	background-color: #c9f2ff;
-	border-radius: 8px;
-	overflow: hidden;
-	padding: 20px;
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	z-index: 1;
+
+.mobile-view {
+    display: none;
 }
-.grid-box img {
-	width: 200%;
-	height: auto;
-	max-height: 200px;
-}
-.box-title {
-	font-size: 18px;
-	font-weight: bold;
-	color: #000000;
-	margin-bottom: 10px;
-}
-.branding-box {
-	grid-area: branding;
-}
-.marketing-box {
-	grid-area: marketing;
-}
-.ads-box {
-	grid-area: ads;
-}
-.funnel-box {
-	grid-area: funnel;
-}
-.seo-box {
-	grid-area: seo;
-}
-.software-box {
-	grid-area: software;
-}
-#performanceGraph {
-	display: block;
-	margin: 0 auto;
+
+/* Mobile responsive styles */
+@media (max-width: 768px) {
+    .desktop-view {
+        display: none; /* Hide desktop content on mobile */
+    }
+
+    .mobile-view {
+        display: block; /* Show mobile content */
+        text-align: center; /* Center content on mobile */
+    }
+
+    .mobile-view img {
+        max-width: 100%; /* Make the image responsive */
+        height: auto;
+    }
+
+    /* Add any additional styling to match the mobile design */
+    /* For example, adjust the padding or margins for the mobile layout */
 }

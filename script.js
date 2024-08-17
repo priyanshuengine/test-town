@@ -43,7 +43,3 @@ window.onload = function() {
     updateCountOnScroll('countup3');
 };
 
-document.getElementById('animateButton').addEventListener('click', () => {
-    const cards = document.querySelectorAll('.usecard');
-    cards.forEach(card => card.classList.add('animate'));
-});
